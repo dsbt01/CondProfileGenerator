@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Conditional Profile Generator</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
@@ -17,7 +17,7 @@
     <ul class="filters">
       <li>
         <label>Include Cover</label>
-        <select class="picker" for="includeCover">
+        <select title="include-cover-option" class="picker" for="includeCover">
           <option value="">Include Cover</option>
           <option value="true">True</option>
           <option value="false">False</option>
@@ -25,38 +25,57 @@
       </li>
       <li>
         <label>Name</label>
-        <input class="picker" for="name" type="text" />
+        <input title="name-input" class="picker" for="name" type="text" />
       </li>
       <li>
         <label>Last Name</label>
-        <input class="picker" for="lastname" type="text" />
+        <input
+          title="lastname-input"
+          class="picker"
+          for="lastname"
+          type="text"
+        />
       </li>
       <li>
         <label>S.M. Position</label>
-        <select class="picker" for="socialMediaPosition">
+        <select
+          title="socialmediaposition-option"
+          class="picker"
+          for="socialMediaPosition"
+        >
           <option value="position-left">Left</option>
           <option value="position-right">Right</option>
         </select>
       </li>
       <li>
         <label>Twitter</label>
-        <input class="picker" for="twitter" type="text" />
+        <input title="twiter-option" class="picker" for="twitter" type="text" />
       </li>
       <li>
         <label>Github</label>
-        <input class="picker" for="github" type="text" />
+        <input title="github-input" class="picker" for="github" type="text" />
       </li>
       <li>
         <label>LinkedIn</label>
-        <input class="picker" for="linkedin" type="text" />
+        <input
+          title="linkedin-input"
+          class="picker"
+          for="linkedin"
+          type="text"
+        />
       </li>
       <li>
         <label>Instagram</label>
-        <input class="picker" for="instagram" type="text" />
+        <input
+          title="instagram-input"
+          class="picker"
+          for="instagram"
+          type="text"
+        />
       </li>
       <li>
         <label>Role</label>
-        <select class="picker" for="role">
+        <select title="role-option" class="picker" for="role">
           <option value="">null</option>
           <option value="Web Developer">Web Developer</option>
           <option value="Floor Planner">Floor Planner</option>
@@ -65,7 +84,7 @@
       </li>
       <li>
         <label>City</label>
-        <select class="picker" for="city">
+        <select title="city-option" class="picker" for="city">
           <option value="">null</option>
           <option value="Miami">Miami</option>
           <option value="Munich">Munich</option>
@@ -75,7 +94,7 @@
       </li>
       <li>
         <label>Country</label>
-        <select class="picker" for="country">
+        <select title="country-option" class="picker" for="country">
           <option value="">null</option>
           <option value="USA">USA</option>
           <option value="Germany">Germany</option>

@@ -29,11 +29,25 @@ function render(variables = {}) {
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
+  let fullName = "Please enter a name";
+
+  if (variables.name && variables.lastname) {
+    fullName = variables.name + " " + variables.lastname;
+  } else {
+    if (variables.name) {
+      fullName = variables.name;
+    } else {
+      if (variables.lastname) {
+        fullName = variables.lastname;
+      }
+    }
+  }
+
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
+          <h1>${fullName}</h1>
           <h2>Web Developer</h2>
           <h3>Miami, USA</h3>
           <ul class="position-right">
@@ -56,7 +70,7 @@ window.onload = function() {
     // this is the url of the image that will used as background for the profile cover
     background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL: "https://randomuser.me/api/portraits/men/42.jpg",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
