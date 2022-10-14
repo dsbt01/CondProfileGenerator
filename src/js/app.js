@@ -75,7 +75,15 @@ function render(variables = {}) {
 
   let linkedinString = "Linkedin: na";
 
+  if (variables.linkedin) {
+    linkedinString = "Linkedin: " + variables.linkedin;
+  }
+
   let instagramString = "Instagram: na";
+
+  if (variables.instagram) {
+    instagramString = "Instagram: " + variables.instagram;
+  }
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
