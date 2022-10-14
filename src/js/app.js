@@ -43,13 +43,25 @@ function render(variables = {}) {
     }
   }
 
+  let occupation = "Please select a role";
+
+  if (variables.role) {
+    occupation = variables.role;
+  }
+
+  let city = "na";
+
+  if (variables.city) {
+    city = variables.city;
+  }
+
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${fullName}</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
+          <h2>${occupation}</h2>
+          <h3>${city}, USA</h3>
           <ul class="position-right">
             <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
@@ -63,6 +75,7 @@ function render(variables = {}) {
 /**
  * Don't change any of the lines below, here is where we do the logic for the dropdowns
  */
+
 window.onload = function() {
   window.variables = {
     // if includeCover is true the algorithm should
