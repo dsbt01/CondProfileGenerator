@@ -61,6 +61,22 @@ function render(variables = {}) {
     country = variables.country;
   }
 
+  let twitterString = "Twitter: na";
+
+  if (variables.twitter) {
+    twitterString = "Twitter: " + variables.twitter;
+  }
+
+  let githubString = "Github: na";
+
+  if (variables.github) {
+    githubString = "Github: " + variables.github;
+  }
+
+  let linkedinString = "Linkedin: na";
+
+  let instagramString = "Instagram: na";
+
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
@@ -74,6 +90,10 @@ function render(variables = {}) {
             <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
           </ul>
+          <h3>${twitterString}</h3>
+          <h3>${githubString}</h3>
+          <h3>${linkedinString}</h3>          
+          <h3>${instagramString}</h3>
         </div>
     `;
 }
